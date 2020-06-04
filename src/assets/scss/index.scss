@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+@import "app/components/footer.scss";
+@import "app/components/sidebar.scss";
+
+@import "app/layouts/auth.scss";
+
+* {
+    color: $jrb-black-color;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-jrb-green {
+    background-color: $jrb-green-color;
+}
+
+.bg-jrb-yellow {
+    background-color: $jrb-yellow-color;
+}
+
+.bg-jrb-red {
+    background-color: $jrb-red-color;
+}
+
+.bg-jrb-gray {
+    background-color: $jrb-gray-color;
+}
+
+a {
+    color: $jrb-black-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $jrb-black-color;
+        text-decoration: none;
+    }
+}
+
+

@@ -1,0 +1,14 @@
+.sidebar {
+    background: $jrb-black-color !important;
+
+    .sidebar-wrapper {
+        ul li.active a {
+            background-color: $jrb-green-color !important;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        color: white;  
+    }
+}
