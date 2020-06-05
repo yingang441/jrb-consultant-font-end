@@ -36,7 +36,7 @@ class Footer extends React.Component {
         </Container>
         <div class="d-flex">
           <div class="bottom-line bg-jrb-green"></div>
-          <div class="bottom-line bg-jrb-yellow" ></div>
+          <div class="bottom-line bg-jrb-orange" ></div>
           <div class="bottom-line bg-jrb-red"></div>
           <div class="bottom-line bg-jrb-gray"></div>
         </div>

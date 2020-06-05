@@ -27,6 +27,7 @@ import "assets/css/demo.css";
 
 import AdminLayout from "layouts/Admin.jsx";
 import Auth from "layouts/Auth.jsx";
+import Footer from "components/Footer/Footer.jsx";
 
 const hist = createBrowserHistory();
 
@@ -37,6 +38,7 @@ ReactDOM.render(
       <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Redirect to="/auth" />
     </Switch>
+    <Footer />
   </Router>,
   document.getElementById("root")
 );

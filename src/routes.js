@@ -23,46 +23,48 @@ import Taskboard from "views/Taskboard.jsx";
 import CDCboard from "views/CDCboard.jsx";
 import Userboard from "views/Userboard.jsx";
 
+import { faProjectDiagram, faTasks, faChevronUp, faBuilding, faUserTie, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faWindows } from '@fortawesome/free-brands-svg-icons';
 var dashRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "design_app",
+    icon: faWindows,
     component: Mainboard,
     layout: "/admin"
   },
   {
     path: "/companies",
     name: "Company management",
-    icon: "design_image",
+    icon: faBuilding,
     component: Companyboard,
     layout: "/admin"
   },
   {
     path: "/landloards",
     name: "Landloards management",
-    icon: "design_image",
+    icon: faUserTie,
     component: Landloardboard,
     layout: "/admin"
   },
   {
     path: "/tasks",
     name: "Task management",
-    icon: "design_image",
+    icon: faTasks,
     component: Taskboard,
     layout: "/admin"
   },
   {
     path: "/cdcview",
     name: "CDC management",
-    icon: "design_image",
+    icon: faProjectDiagram,
     component: CDCboard,
     layout: "/admin"
   },
   {
     path: "/users",
     name: "User management",
-    icon: "design_image",
+    icon: faUsers,
     component: Userboard,
     layout: "/admin"
   },
