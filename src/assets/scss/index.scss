@@ -2,6 +2,7 @@
 
 @import "app/components/footer.scss";
 @import "app/components/sidebar.scss";
+@import "app/components/officepreview.scss";
 
 @import "app/layouts/auth.scss";
 @import "app/layouts/admin.scss";
@@ -26,6 +27,36 @@ a, span, p, label {
 
 .bg-jrb-gray {
     background-color: $jrb-gray-color;
+}
+
+.jrb-button {
+    border: none;
+    color: $jrb-black-color;
+    background: transparent;
+    border-radius: 20px;
+    outline: none;
+}
+
+.hv-jrb-green {
+    &:hover {
+        background-color: $jrb-green-color;
+        color: white;
+
+        a: {
+            color: white !important;
+        }
+    }
+}
+
+.hv-jrb-yellow {
+    &:hover {
+        background-color: #b7afa3;
+        color: white;
+
+        a {
+            color: white;
+        }
+    }
 }
 
 .big {

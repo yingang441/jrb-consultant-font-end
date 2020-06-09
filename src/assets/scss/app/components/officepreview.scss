@@ -1,0 +1,120 @@
+.officechart-container {
+    background-color: #E8D0A9;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 22px;
+
+    .slick-arrow {
+        display: none !important;
+    }
+    
+    .magic-dots.slick-dots {
+        width: 60px !important;
+        margin-left: 14px !important;
+        li {
+            width: 3px !important;
+        }        
+    }
+
+    .btn-report:hover {
+        * {
+            color: $jrb-black-color !important;
+        }
+    } 
+
+}
+
+.officepreview-container {
+    background-color: #66666680;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 22px;
+
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .magic-dots.slick-dots {
+        width: 60px !important;
+        margin-left: 14px !important;
+        li {
+            width: 3px !important;
+        }        
+    }
+
+    .officepreview-item {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+.recentoffices-container {
+    background-color: #eee;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 23px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 22px;
+    height: 100%;
+
+    .magic-dots.slick-dots {
+        width: 60px !important;
+        bottom: -15px;
+        li {
+            width: 3px !important;
+        }        
+    }
+
+
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .slick-slider {
+        height: calc(100% - 100px);
+        margin-top: 12px;
+
+        .slick-list {
+            height: 100%;
+
+        }
+    }
+}
+
+.recentoffice-board{
+    font-size: 11px;
+    background-color: white;
+    padding: 11px 16px;
+    border-radius: 20px;
+    height: 100%;
+
+    .portrait-wrapper {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .pre-dot:before {
+        content: "";
+        margin: 5px;
+        width: 5px;
+        height: 7px;
+        background: $jrb-black-color;
+        display: inline-block;
+        margin-bottom: 1px;
+    }
+}

@@ -23,7 +23,7 @@ import Taskboard from "views/Taskboard.jsx";
 import CDCboard from "views/CDCboard.jsx";
 import Userboard from "views/Userboard.jsx";
 
-import { faProjectDiagram, faTasks, faChevronUp, faBuilding, faUserTie, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faProjectDiagram, faTasks, faBuilding, faUserTie, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 var dashRoutes = [
   {

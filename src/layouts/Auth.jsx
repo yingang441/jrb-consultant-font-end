@@ -37,7 +37,7 @@ class Auth extends React.Component {
                       align-items-center
                       justify-content-center"
             style={{height: '100vh'}}>
-        <img className="logo-image" width="100px" src={Logo} />
+        <img alt="alt" className="logo-image" width="100px" src={Logo} />
         <Switch>
           <Route path="/auth/login" component={Login} />
           <Route path="/auth/reset" component={Reset} />

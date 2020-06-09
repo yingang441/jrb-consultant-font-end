@@ -16,20 +16,15 @@
 
 */
 import React from "react";
-// javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // core components
 import Header from "components/Navbars/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
 
 import routes from "routes.js";
-
-var ps;
 
 class Dashboard extends React.Component {
   state = {
@@ -51,7 +46,7 @@ class Dashboard extends React.Component {
             routes={routes}
             backgroundColor={'$jrb-black-color'}
           />
-          <div className="main-panel" style={{backgroundColor: 'white'}} ref={this.mainPanel}>
+          <div className="main-panel" style={{overflow: 'hidden', backgroundColor: 'white'}} ref={this.mainPanel}>
             <Header {...this.props} />
             <Switch>
               {routes.map((prop, key) => {
