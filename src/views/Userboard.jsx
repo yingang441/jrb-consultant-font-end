@@ -16,11 +16,27 @@
 
 */
 import React from "react";
+import { Row, Col } from 'reactstrap';
+import UserTable from 'components/UserTable/UserTable.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 class Userboard extends React.Component {
   render() {
     return (
-        <h1 style={{paddingTop: 50}}>Userboard</h1>
+      <div style={{height: `100%`}}>
+        <Row style={{paddingRight: 15, paddingLeft: 15}}>
+          <Col>
+            <p >Dashboard  >  User Management</p>
+          </Col>
+          <Col>
+            <p style={{ textAlign: `right`}}>
+              <FontAwesomeIcon icon={faChevronLeft } /> BACK
+            </p>
+          </Col>
+        </Row>
+        <UserTable />
+      </div>
     );
   }
 }

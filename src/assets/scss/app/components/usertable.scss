@@ -1,0 +1,43 @@
+.user-table {
+    background-color: #f5f4f2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding-top: 35px;
+    padding-bottom: 63px;
+    padding-left: 35px;
+    padding-right: 30px;
+    border-radius: 30px;
+
+
+    display: flex;
+    flex-direction: column;
+    
+    .header, .row-item {
+        display: flex;
+        
+        div {
+            font-size: 11px;
+            flex: 1;
+            padding: 0.8rem 0.4em;
+            border-bottom: 1px solid #DDD;
+            text-align: center;
+        }
+
+        &.odd {
+            background-color: white;
+        }
+    }
+    
+    .header {
+        margin: 0;
+        
+        div { 
+            cursor: pointer;
+        }
+    }
+
+
+}
