@@ -24,7 +24,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 class Userboard extends React.Component {
   render() {
     return (
-      <div style={{height: `100%`}}>
+      <div className="d-flex flex-column flex" style={{height: `100%`}}>
         <Row style={{paddingRight: 15, paddingLeft: 15}}>
           <Col>
             <p >Dashboard  >  User Management</p>

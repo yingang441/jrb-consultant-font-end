@@ -6,6 +6,10 @@
   see: https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
 */
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch, faUserPlus, faPenSquare, faUserTimes } from "@fortawesome/free-solid-svg-icons"
+
+
 const RowItem = ({id, name, location, email, phone, type, date, index}) => (
   <div className={`row-item d-flex align-items-center ${index % 2 ? 'odd': ''}`}>
     <div style={{maxWidth: 30}}><input type={'checkbox'} /> </div>
@@ -16,7 +20,14 @@ const RowItem = ({id, name, location, email, phone, type, date, index}) => (
     <div>{phone}</div>
     <div>{type}</div>
     <div>{date}</div>
-    <div>{index}</div>
+    <div className="d-flex align-items-center justify-content-center">
+      <button className="btn circled jrb-button hv-jrb-green">
+        <FontAwesomeIcon size="2x" icon={faPenSquare} />
+      </button>
+      <button className="btn circled jrb-button hv-jrb-red">
+        <FontAwesomeIcon icon={faUserTimes} size="2x"/>
+      </button>
+    </div>
   </div>
 );
 
@@ -84,7 +95,19 @@ class UserTable extends React.Component {
   render() {
     return (
       <div className="user-table">
-        <div className="header">
+        <div className="header d-flex align-items-center justify-content-between">
+          <div className="d-flex justify-content-between align-items-center" style={{width: `40%`, backgroundColor: 'white', borderRadius: 20, padding: 13, border: '1px solid #ddd'}}>
+            <input type="text" placeholder="Search on users" className="bg-transparent border-none" style={{fontSize: 13}}/>
+            <FontAwesomeIcon icon={faSearch} />
+          </div>
+          <div>
+            <div className="jrb-button hv-jrb-green" style={{padding: 13}}>
+              <FontAwesomeIcon className="mr-4" icon={faUserPlus} />
+              Add New User
+            </div>
+          </div>
+        </div>
+        <div className="table-header">
           <div style={{maxWidth: 30}}><input type={'checkbox'} /> </div>
           <div onClick={() => this.sortBy('id')} >User ID</div>
           <div onClick={() => this.sortBy('name')}>Full name</div>

@@ -38,10 +38,26 @@ a, span, p, label {
     outline: none;
 }
 
+.border-none {
+    border: none;
+    outline: none;
+}
+
 .hv-jrb-green {
     &:hover {
-        background-color: $jrb-green-color;
-        color: white;
+        background-color: $jrb-green-color !important;
+        color: white !important;
+
+        a: {
+            color: white !important;
+        }
+    }
+}
+
+.hv-jrb-red {
+    &:hover {
+        background-color: $jrb-red-color !important;
+        color: white !important;
 
         a: {
             color: white !important;
@@ -52,7 +68,7 @@ a, span, p, label {
 .hv-jrb-yellow {
     &:hover {
         background-color: #b7afa3;
-        color: white;
+        color: white !important;
 
         a {
             color: white;
@@ -80,5 +96,22 @@ body {
     #root {
         height: calc(100% - 40px);
     }
+}
+
+.circled {
+    border-radius: 50%;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+
+    &:active {
+        background: transparent;        
+    }
+
+    &:focus {
+        background: transparent;
+        color: $jrb-black-color;        
+    }
+
 }
 
