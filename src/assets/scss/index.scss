@@ -51,6 +51,10 @@ a, span, p, label {
         a: {
             color: white !important;
         }
+
+        span: {
+            color: white !important;
+        }
     }
 }
 
@@ -62,6 +66,10 @@ a, span, p, label {
         a: {
             color: white !important;
         }
+
+        span: {
+            color: white !important;
+        }
     }
 }
 
@@ -71,6 +79,10 @@ a, span, p, label {
         color: white !important;
 
         a {
+            color: white;
+        }
+
+        span {
             color: white;
         }
     }
@@ -103,6 +115,11 @@ body {
     padding: 8px;
     width: 40px;
     height: 40px;
+
+    &.text {
+        border-radius: 22px;
+        width: auto;
+    }
 
     &:active {
         background: transparent;        

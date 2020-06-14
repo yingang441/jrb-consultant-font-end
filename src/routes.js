@@ -16,58 +16,59 @@
 
 */
 
-import Mainboard from "views/Mainboard.jsx";
-import Companyboard from "views/Companyboard.jsx";
-import Landloardboard from "views/Landloardboard.jsx";
-import Taskboard from "views/Taskboard.jsx";
-import CDCboard from "views/CDCboard.jsx";
-import Userboard from "views/Userboard.jsx";
+import MainBoard from 'views/MainBoard.jsx';
+import CompanyBoard from 'views/CompanyBoard.jsx';
+import LandloardBoard from 'views/LandloardBoard.jsx';
+import TaskBoard from 'views/TaskBoard.jsx';
+import CDCBoard from 'views/CDCBoard.jsx';
+import UserBoard from 'views/UserBoard.jsx';
 
 import { faProjectDiagram, faTasks, faBuilding, faUserTie, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
-var dashRoutes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: faWindows,
-    component: Mainboard,
-    layout: "/admin"
-  },
-  {
-    path: "/companies",
-    name: "Company management",
-    icon: faBuilding,
-    component: Companyboard,
-    layout: "/admin"
-  },
-  {
-    path: "/landloards",
-    name: "Landloards management",
-    icon: faUserTie,
-    component: Landloardboard,
-    layout: "/admin"
-  },
-  {
-    path: "/tasks",
-    name: "Task management",
-    icon: faTasks,
-    component: Taskboard,
-    layout: "/admin"
-  },
-  {
-    path: "/cdcview",
-    name: "CDC management",
-    icon: faProjectDiagram,
-    component: CDCboard,
-    layout: "/admin"
-  },
-  {
-    path: "/users",
-    name: "User management",
-    icon: faUsers,
-    component: Userboard,
-    layout: "/admin"
-  },
 
+const dashRoutes = [
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    icon: faWindows,
+    component: MainBoard,
+    layout: '/admin',
+  },
+  {
+    path: '/companies',
+    name: 'Company management',
+    icon: faBuilding,
+    component: CompanyBoard,
+    layout: '/admin',
+  },
+  {
+    path: '/landloards',
+    name: 'Landloards management',
+    icon: faUserTie,
+    component: LandloardBoard,
+    layout: '/admin',
+  },
+  {
+    path: '/tasks',
+    name: 'Task management',
+    icon: faTasks,
+    component: TaskBoard,
+    layout: '/admin',
+  },
+  {
+    path: '/cdcview',
+    name: 'CDC management',
+    icon: faProjectDiagram,
+    component: CDCBoard,
+    layout: '/admin',
+  },
+  {
+    path: '/users',
+    name: 'User management',
+    icon: faUsers,
+    component: UserBoard,
+    layout: '/admin',
+  },
 ];
+
 export default dashRoutes;

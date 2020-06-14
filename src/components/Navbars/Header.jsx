@@ -15,8 +15,8 @@
 
 
 */
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -32,10 +32,10 @@ import {
   InputGroup,
   InputGroupText,
   InputGroupAddon,
-  Input
-} from "reactstrap";
+  Input,
+} from 'reactstrap';
 
-import routes from "routes.js";
+import routes from 'routes';
 
 class Header extends React.Component {
   state = {
