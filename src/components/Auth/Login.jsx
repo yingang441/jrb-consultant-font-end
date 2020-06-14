@@ -32,7 +32,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faLock } from '@fortawesome/free-solid-svg-icons';
 import { login } from 'redux/actions/auth';
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   min-width: 360px;
 
   @media (max-width: 768px) {
