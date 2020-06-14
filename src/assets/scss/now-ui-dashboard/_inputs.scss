@@ -11,8 +11,6 @@
     @include transition-input-focus-color();
     @include box-shadow(none);
 
-
-
     &:focus{
         border: 1px solid $primary-color;
         @include box-shadow(none);

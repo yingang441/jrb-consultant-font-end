@@ -15,14 +15,12 @@
 
 
 */
-import React from "react";
+import React from 'react';
 
-class CDCboard extends React.Component {
-  render() {
-    return (
-        <h1 style={{paddingTop: 50}}>CDCboard</h1>
-    );
-  }
-}
+const TaskBoard = () => {
+  return (
+      <h1 style={{ paddingTop: 50 }}>Taskboard</h1>
+  );
+};
 
-export default CDCboard;
+export default TaskBoard;

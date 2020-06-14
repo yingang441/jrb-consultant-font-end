@@ -15,14 +15,12 @@
 
 
 */
-import React from "react";
+import React from 'react';
 
-class Taskboard extends React.Component {
-  render() {
-    return (
-        <h1 style={{paddingTop: 50}}>Taskboard</h1>
-    );
-  }
-}
+const LandloardBoard = () => {
+  return (
+    <h1 style={{paddingTop: 50}}>Landloardboard</h1>
+  );
+};
 
-export default Taskboard;
+export default LandloardBoard;

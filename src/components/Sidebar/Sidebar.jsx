@@ -16,14 +16,14 @@
 
 */
 /*eslint-disable*/
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Nav } from "reactstrap";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Nav } from 'reactstrap';
 // javascript plugin used to create scrollbars on windows
-import PerfectScrollbar from "perfect-scrollbar";
+import PerfectScrollbar from 'perfect-scrollbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from "assets/img/Logo-mini.png";
-import { faPhoneSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
 var ps;
 

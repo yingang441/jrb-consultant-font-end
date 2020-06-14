@@ -15,14 +15,12 @@
 
 
 */
-import React from "react";
+import React from 'react';
 
-class Landloardboard extends React.Component {
-  render() {
-    return (
-        <h1 style={{paddingTop: 50}}>Landloardboard</h1>
-    );
-  }
-}
+const CompanyBoard = () => {
+  return (
+    <h1 style={{paddingTop: 50}}>Companyboard</h1>
+  );
+};
 
-export default Landloardboard;
+export default CompanyBoard;

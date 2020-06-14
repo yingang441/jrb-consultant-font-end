@@ -15,14 +15,12 @@
 
 
 */
-import React from "react";
+import React from 'react';
 
-class Companyboard extends React.Component {
-  render() {
-    return (
-        <h1 style={{paddingTop: 50}}>Companyboard</h1>
-    );
-  }
-}
+const CDCBoard = () => {
+  return (
+    <h1 style={{paddingTop: 50}}>CDCboard</h1>
+  );
+};
 
-export default Companyboard;
+export default CDCBoard;
