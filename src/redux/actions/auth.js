@@ -29,7 +29,8 @@ export const login = ({
 }) => (dispatch) => {
   dispatch(authLoginRequest());
   ApiHandler.auth.login({ email, password })
-    .then(({ data }) => {
+    .then((data) => {
+	  console.log('login ', data);
       dispatch(authLoginSuccess());
       history.push('/admin');
     })
