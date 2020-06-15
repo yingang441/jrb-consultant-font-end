@@ -30,12 +30,11 @@ export const login = ({
   dispatch(authLoginRequest());
   ApiHandler.auth.login({ email, password })
     .then(({ data }) => {
-	    console.log('login ', data);
       dispatch(authLoginSuccess());
       history.push('/admin');
     })
     .catch((err) => {
-      console.log('login catch ', err);
+      console.log('login catch ', err.response);
       dispatch(authLoginError(err.response.data.msg));
     });
 };
