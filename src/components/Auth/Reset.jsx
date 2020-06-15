@@ -32,6 +32,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { forgotPassword } from 'redux/actions/auth';
 import { StyledContainer } from './Login.jsx';
+import { validateEmail } from 'services/helper';
 
 const Reset = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ const Reset = () => {
     e.preventDefault();
     setDirty(true);
     if (!email) return;
+    if (!validateEmail(email)) return;
     dispatch(forgotPassword({ email }));
     setDirty(false);
   };
@@ -58,15 +60,20 @@ const Reset = () => {
                 name="email"
                 className="text-center"
                 disabled={loading}
-                invalid={dirty && !email}
+                invalid={(dirty && !email) || (dirty && !validateEmail(email))}
                 placeholder="Email Address"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {dirty && (
+              {(dirty && !email) && (
                 <FormFeedback>
                   Email is required
+                </FormFeedback>
+              )}
+              {(dirty && email && !validateEmail(email)) && (
+                <FormFeedback>
+                  Email is not valid
                 </FormFeedback>
               )}
             </FormGroup>

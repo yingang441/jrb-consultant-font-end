@@ -33,6 +33,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faLock } from '@fortawesome/free-solid-svg-icons';
 import { login } from 'redux/actions/auth';
+import { validateEmail } from 'services/helper';
 
 export const StyledContainer = styled.div`
   min-width: 360px;
@@ -56,6 +57,7 @@ const Login = () => {
     e.preventDefault();
     setDirty(true);
     if (!email || ! password) return;
+    if (!validateEmail(email)) return;
     dispatch(login({ email, password }));
     setDirty(false);
   };
@@ -72,15 +74,20 @@ const Login = () => {
                 autoComplete="off"
                 className="text-center"
                 disabled={loading}
-                invalid={dirty && !email}
+                invalid={(dirty && !email) || (dirty && !validateEmail(email))}
                 placeholder="Username(6 Digit Consultant ID)"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {dirty && (
+              {(dirty && !email) && (
                 <FormFeedback>
                   Email is required
+                </FormFeedback>
+              )}
+              {(dirty && email && !validateEmail(email)) && (
+                <FormFeedback>
+                  Email is not valid
                 </FormFeedback>
               )}
             </FormGroup>
