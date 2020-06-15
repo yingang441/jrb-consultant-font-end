@@ -22,6 +22,7 @@ import {
   Button,
   FormGroup,
   Form,
+  FormFeedback,
   Input,
   Label,
   Row,
@@ -49,11 +50,14 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(false);
+  const [dirty, setDirty] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setDirty(true);
+    if (!email || ! password) return;
     dispatch(login({ email, password }));
+    setDirty(false);
   };
 
   return (
@@ -61,29 +65,43 @@ const Login = () => {
       <Col className="px-1">
         <StyledContainer>
           <Form>
-            <FormGroup className="mb-3">
+            <FormGroup autoComplete="off" className="mb-3">
               <Input
                 id="email"
                 name="email"
+                autoComplete="off"
                 className="text-center"
                 disabled={loading}
+                invalid={dirty && !email}
                 placeholder="Username(6 Digit Consultant ID)"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {dirty && (
+                <FormFeedback>
+                  Email is required
+                </FormFeedback>
+              )}
             </FormGroup>
             <FormGroup className="mb-3">
               <Input
                 id="password"
                 name="password"
+                autoComplete="new-password"
                 className="text-center"
                 disabled={loading}
+                invalid={dirty && !password}
                 placeholder="Password" 
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              {dirty && (
+                <FormFeedback>
+                  Password is required
+                </FormFeedback>
+              )}
             </FormGroup>
             <div className="d-flex justify-content-between mb-3">
               <Button
@@ -128,7 +146,7 @@ const Login = () => {
                 <Alert color={error === 'Unauthorized' ? 'warning' : 'danger'}>
                   {error === 'Unauthorized'
                     ? 'Password is invalid'
-                    : 'Sorry, Your account has been suspended!'}
+                    : error}
                 </Alert>
               )}
             </div>

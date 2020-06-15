@@ -15,7 +15,7 @@ const Main = (props) => {
       ? <Route path="/auth" render={props => <Auth />} />
       : <Route path="/admin" render={props => <AdminLayout {...props} />} />}
       <Route exact path="/">
-        {authenticated && <Redirect to="/admin" />}
+        {authenticated && <Redirect to="/admin/dashboard" />}
         {!authenticated && <Redirect to="/auth" />}
       </Route>
       <Footer />

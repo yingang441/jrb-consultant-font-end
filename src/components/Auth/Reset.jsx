@@ -23,6 +23,7 @@ import {
   Button,
   FormGroup,
   Form,
+  FormFeedback,
   Input,
   Row,
   Col
@@ -36,9 +37,14 @@ const Reset = () => {
   const dispatch = useDispatch();
   const { success, error, loading } = useSelector((state) => state.auth);
   const [email, setEmail] = useState('');
+  const [dirty, setDirty] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDirty(true);
+    if (!email) return;
     dispatch(forgotPassword({ email }));
+    setDirty(false);
   };
 
   return (
@@ -52,11 +58,17 @@ const Reset = () => {
                 name="email"
                 className="text-center"
                 disabled={loading}
+                invalid={dirty && !email}
                 placeholder="Email Address"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {dirty && (
+                <FormFeedback>
+                  Email is required
+                </FormFeedback>
+              )}
             </FormGroup>
             <div className="mb-3">
               <Button
