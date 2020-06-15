@@ -31,7 +31,7 @@ export const login = ({
     .then(({ data }) => {
       window.localStorage.setItem('token', JSON.stringify(data));
       dispatch(authLoginSuccess());
-      //history.push('/admin');
+      history.push('/admin');
     })
     .catch((err) => {
       dispatch(authLoginError(err.response.data.msg));
