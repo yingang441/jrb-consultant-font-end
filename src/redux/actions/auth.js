@@ -13,9 +13,8 @@ const authLoginRequest = () => ({
   type: JRB_AUTH_LOGIN_REQUEST,
 });
 
-const authLoginSuccess = (payload) => ({
+const authLoginSuccess = () => ({
   type: JRB_AUTH_LOGIN_SUCCESS,
-  payload,
 });
 
 const authLoginError = (payload) => ({
