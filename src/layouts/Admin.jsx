@@ -42,16 +42,13 @@ const Dashboard = (props) => {
         <div className="main-panel" style={{overflow: 'hidden', backgroundColor: 'white'}} ref={mainPanel}>
           <Header {...props} />
           <Switch>
-            {routes.map((prop, key) => {
-              return (
-                <Route
-                  path={prop.layout + prop.path}
-                  component={prop.component}
-                  key={key}
-                />
-              );
-            })}
-
+            {routes.map((prop, key) => (
+              <Route
+                path={prop.layout + prop.path}
+                component={prop.component}
+                key={key}
+              />
+            ))}
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch> 
         </div>

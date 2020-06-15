@@ -161,25 +161,6 @@ class Header extends React.Component {
                 </InputGroupAddon>
               </InputGroup>
             </form>
-            <Nav navbar>
-              <Collapsible
-                className="collapsible-collapsed"
-                openedClassName="collapsible-collapsed"
-                triggerClassName="collapsible-trigger-collapsed"
-                trigger={LocationTrigger}>
-                <p>
-                  This is the collapsible content. It can be any element or React component you like.
-                </p>
-              </Collapsible>
-              <NavItem>
-                <Link to="#pablo" className="nav-link">
-                  <i className="now-ui-icons users_single-02" />
-                  <p>
-                    <span className="d-lg-none d-md-block">Account</span>
-                  </p>
-                </Link>
-              </NavItem>
-            </Nav>
           </Collapse>
         </Container>
       </Navbar>

@@ -7,12 +7,14 @@ import {
   JRB_AUTH_FORGOT_ERROR,
 } from '../actions/auth';
 
+const token = JSON.parse(window.localStorage.getItem('token'));
+
 const initialState = {
   loading: false,
   success: false,
   error: null,
   user: null,
-  authenticated: false,
+  authenticated: !!token,
 };
 
 export default function (state = initialState, action) {
