@@ -35,7 +35,7 @@ export const login = ({
       history.push('/admin');
     })
     .catch((err) => {
-      console.log('login catch ', err.response);
+      console.log('login catch ', err);
       dispatch(authLoginError(err.response.data.msg));
     });
 };
