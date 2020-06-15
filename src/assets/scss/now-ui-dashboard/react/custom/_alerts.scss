@@ -17,7 +17,8 @@
   }
 
   &.alert-warning{
-    background-color: lighten($warning-color, 5%);
+    background-color: #E8D0A946;
+    color: #66666674;
   }
 
   &.alert-info{
@@ -27,7 +28,6 @@
   &.alert-primary{
     background-color: lighten($primary-color, 5%);
   }
-
 
   i.fa,
   i.now-ui-icons{

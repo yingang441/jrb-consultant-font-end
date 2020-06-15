@@ -17,6 +17,7 @@
     "perfect-scrollbar": "1.4.0",
     "react": "16.8.6",
     "react-chartjs-2": "2.7.6",
+    "react-collapsible": "^2.8.0",
     "react-dom": "16.8.6",
     "react-google-charts": "^3.0.15",
     "react-google-maps": "9.4.5",

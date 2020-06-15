@@ -18,6 +18,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  Alert,
   Button,
   FormGroup,
   Form,
@@ -44,7 +45,7 @@ export const StyledContainer = styled.div`
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.auth);
+  const { loading, success, error } = useSelector((state) => state.auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(false);
@@ -104,7 +105,7 @@ const Login = () => {
                 />
               </Button>
             </div>
-            <FormGroup check className="ml-3">
+            <FormGroup check className="mb-3">
               <Input
                 id="trust"
                 name="trust"
@@ -122,6 +123,15 @@ const Login = () => {
                 Trust this device
               </span>
             </FormGroup>
+            <div className="mb-3">
+              {(error && !loading) && (
+                <Alert color={error === 'Unauthorized' ? 'warning' : 'danger'}>
+                  {error === 'Unauthorized'
+                    ? 'Password is invalid'
+                    : 'Sorry, Your account has been suspended!'}
+                </Alert>
+              )}
+            </div>
           </Form>
         </StyledContainer>
       </Col>
